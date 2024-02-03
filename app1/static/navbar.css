@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@400;500;600&family=Tilt+Prism&family=Varela+Round&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+	box-sizing: border-box;
+}
+
+:root {
+	--container-color: #1a1e21;
+	--second-color: #fd8f44;
+	--text-color: #172317;
+	--bg-color: #fff;
+}
+
+::selection {
+	color: var(--bg-color);
+	background: var(--second-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding-right: 14px;
+}
+
+img {
+	width: 100%;
+}
+
+section {
+	padding: 3rem 0 2rem;
+}
+
+.container {
+	max-width: 1068px;
+	margin: auto;
+	width: 100%;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 0;
+}
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--bg-color);
+}
+
+.logo span {
+	color: var(--second-color);
+}
+
+.option {
+	display: inline;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+}
+.navOption {
+	padding: 8px 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 4px;
+	background: #fd8f44;
+	color: #fff;
+}
+
+.navOption li:hover {
+	background: hsl(24, 97%, 58%);
+	transition: 0.3s;
+	float: left;
+}

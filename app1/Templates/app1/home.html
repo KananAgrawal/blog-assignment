@@ -1,0 +1,26 @@
+<section class="home" id="home">
+  <div class="home-text container">
+    <h2 class="home-title">The Blog Website</h2>
+    <span class="home-subtitle">Your Source for great content</span>
+  </div>
+</section>
+{% extends 'D:\Django project\project1\app1\Templates\app1\main.html' %}
+
+<div class="block">
+  {% block content %}
+  {% for post in post %}
+  <article class="media content-section">
+    <img src="{{ post.author.profile.image.url }}" class="rounded-circle article-img" />
+    <div class="media-body">
+      <div class="article-metadata">
+        <a href="{% url 'profile' %}" class="mr-2">By {{ post.author }}</a>
+        <small class="text-muted"> {{ post.date_of_post|date:"F d, Y" }}</small>
+      </div>
+      <h2><a href="{% url 'post-detail' post.id %}" class="article-title">{{post.topic}}</a></h2>
+      <p class="article-content">{{ post.content }}</p>
+    </div>
+    <br />
+  </article>
+  {% endfor %}
+  {% endblock content %}
+</div>

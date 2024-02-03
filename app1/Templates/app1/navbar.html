@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'navbar.css' %}">
+<nav class="nav container">
+  <a href="{% url 'home' %}" class="logo">Blog <span>App</span></a>
+  <div class="option">
+    <ul>
+      <li><a href="{% url 'home' %}" class="navOption">Home</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'post-create' %}" class="navOption">New Post</a></li>
+      <li><a href="{% url 'profile' %}" class="navOption">Profile</a></li>
+      <li><a href="{% url 'logout' %}" class="navOption">Logout</a></li>
+      {% else %}
+      <li><a href="{% url 'login' %}" class="navOption">Login</a></li>
+      <li><a href="{% url 'register' %}" class="navOption">Sign Up</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+</nav>

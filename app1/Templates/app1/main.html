@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{% static 'navbar.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+  <style>
+    #mes {
+      margin: 100px 50px 10px 312px;
+      border-width: 3px;
+      border-radius: 40px;
+      border-color: black;
+    }
+
+    /* .content-section h1{
+        margin: 100px 50px 10px 312px;
+    } */
+  </style>
+  {% if title %}
+  <title>Django Blog -{{ title }}</title>
+  {% else %}
+  <title>Django Blog</title>
+  {% endif %}
+</head>
+
+<body>
+  <header>
+    {% include 'D:\Django project\project1\app1\Templates\app1\navbar.html' %}
+  </header>
+  <br /><br /><br /><br /><br />
+  <div id="mes">
+    {% if messages %} {% for message in messages %}
+    <div class="alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %} {% endif %} {% block content %} {% endblock %}
+  </div>
+</body>
+
+</html>
