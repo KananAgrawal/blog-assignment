@@ -1,4 +1,4 @@
-{% extends 'D:\Django project\project1\app1\Templates\app1\main.html' %}
+{% extends './main.html' %}
 
 <div class="block">
   {% block content %}
@@ -7,7 +7,9 @@
     <img src="{{ object.author.profile.image.url }}" />
     <div>
       <div>
-        <a href="{% url 'profile' %}"><p>By {{ object.author }}</p></a>
+        <a href="{% url 'profile' %}">
+          <p>By {{ object.author }}</p>
+        </a>
         <small>on {{ object.date_of_post|date:"F d, Y" }}</small>
       </div>
       <h1>{{object.topic}}</h1>
