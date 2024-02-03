@@ -88,9 +88,8 @@
 	border: 2px solid #fd8f44;
 }
 
-/* .home .profile-pic {
-	height: 40px;
+.profile-name {
+	font-size: 0.82rem;
+	font-weight: 500;
+	color: #1a1e21;
 }
-.info {
-	align-items: center;
-} */

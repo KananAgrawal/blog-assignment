@@ -31,13 +31,21 @@
 
 <body>
   <header>
-    {% include './navbar.html' %}
+    {% include 'D:\Django project\project1\app1\Templates\app1\navbar.html' %}
   </header>
-  <br /><br /><br /><br /><br />
   <div id="mes">
     {% if messages %} {% for message in messages %}
     <div class="alert-{{ message.tags }}">{{ message }}</div>
     {% endfor %} {% endif %} {% block content %} {% endblock %}
+  </div>
+  <div class="footer container">
+    <p>&#169; The Blog Website All Right Reserved</p>
+    <div class="social">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+    </div>
   </div>
 </body>
 

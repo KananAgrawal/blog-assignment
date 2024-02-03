@@ -17,7 +17,7 @@
     <p class="post-description">{{ post.content }}</p>
     <div class="profile">
       <img src="{{ post.author.profile.image.url }}" class="profile-img" />
-      <span class="profile-name"><a href="{% url 'profile' %}">{{ post.author }}</a></span>
+      <span><a href="{% url 'profile' %}" class="profile-name">{{ post.author }}</a></span>
     </div>
   </div>
   {% endfor %}
