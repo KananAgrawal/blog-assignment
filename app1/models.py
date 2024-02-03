@@ -6,7 +6,7 @@ from django.urls import reverse
 class Post(models.Model):
     topic = models.CharField(max_length=200, blank= True)
     content = models.TextField()
-    # image = models.ImageField(default='default-blog-thumb.png',upload_to = 'blog_pics')
+    image = models.ImageField(default='default-blog-thumb.png',upload_to = 'blog_pics')
     date_of_post = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

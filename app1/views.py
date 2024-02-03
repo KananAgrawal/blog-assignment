@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView,CreateView, UpdateView,DeleteView
 from .models import Post
+from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 def home(request):
@@ -21,7 +22,9 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model= Post
-    fields = ['topic','content']
+    form_class = PostForm
+    # template_name = 'post_form.html'
+
     
     def form_valid(self,form):
         form.instance.author = self.request.user

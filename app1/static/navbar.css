@@ -79,7 +79,7 @@ section {
 	color: #fff;
 }
 
-.listOption:hover {
+.navOption:hover {
 	background: hsl(24, 93%, 36%);
 	transition: 0.3s;
 }

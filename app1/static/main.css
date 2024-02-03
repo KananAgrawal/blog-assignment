@@ -22,3 +22,13 @@ header {
 	align-items: center;
 	column-gap: 1rem;
 }
+
+.social .bx {
+	font-size: 1.4rem;
+	color: #172317;
+}
+
+.social .bx:hover {
+	color: #fd8f44;
+	transition: 0.3s all linear;
+}
