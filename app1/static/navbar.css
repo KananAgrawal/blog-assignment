@@ -17,8 +17,8 @@
 }
 
 ::selection {
-	color: var(--bg-color);
-	background: var(--second-color);
+	color: #fff;
+	background: #fd8f44;
 }
 
 a {
@@ -79,8 +79,7 @@ section {
 	color: #fff;
 }
 
-.navOption li:hover {
-	background: hsl(24, 97%, 58%);
+.listOption:hover {
+	background: hsl(24, 93%, 36%);
 	transition: 0.3s;
-	float: left;
 }
