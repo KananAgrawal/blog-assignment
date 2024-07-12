@@ -8,12 +8,12 @@ def home(request):
     context = {
         'post': Post.objects.all()
     }
-    return render(request, 'app1/home.html',context)
+    return render(request, './Templates/app1/home.html',context)
 
 
 class PostListView(ListView):
     model= Post
-    template_name = 'app1/home.html'
+    template_name = './Templates/app1/home.html'
     context_object_name = 'post'
     ordering = ['-date_of_post']
 
@@ -57,5 +57,5 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return False
 
 def room(request):
-    return render(request,'app1/about.html',{'title':'About'})
+    return render(request,'./Templates/app1/about.html',{'title':'About'})
 
