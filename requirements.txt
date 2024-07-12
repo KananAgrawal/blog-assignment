@@ -98,5 +98,5 @@ urllib3
 vine
 wcwidth
 whitenoise
-winkerberos
+#winkerberos
 wrapt
